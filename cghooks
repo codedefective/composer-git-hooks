@@ -22,7 +22,7 @@ use Codedefective\CGHooks\Commands\ListCommand;
 use Codedefective\CGHooks\Commands\HookCommand;
 use Symfony\Component\Console\Application;
 
-$application = new Application('Composer Git Hooks', '3.0.0-alpha.1');
+$application = new Application('Composer Git Hooks', '3.1.0');
 
 $application->add(new AddCommand());
 $application->add(new UpdateCommand());
