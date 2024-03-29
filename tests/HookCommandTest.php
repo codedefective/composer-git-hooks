@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Tests;
+namespace Codedefective\CGHooks\Tests;
 
-use BrainMaestro\GitHooks\Commands\HookCommand;
+use Codedefective\CGHooks\Commands\HookCommand;
 use Symfony\Component\Console\Tester\CommandTester;
 
 class HookCommandTest extends TestCase

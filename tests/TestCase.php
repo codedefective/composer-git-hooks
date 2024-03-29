@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Tests;
+namespace Codedefective\CGHooks\Tests;
 
-use BrainMaestro\GitHooks\Hook;
+use Codedefective\CGHooks\Hook;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
 abstract class TestCase extends PHPUnitTestCase

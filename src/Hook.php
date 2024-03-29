@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainMaestro\GitHooks;
+namespace Codedefective\CGHooks;
 
 use Exception;
 

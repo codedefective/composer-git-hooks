@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Commands;
+namespace Codedefective\CGHooks\Commands;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

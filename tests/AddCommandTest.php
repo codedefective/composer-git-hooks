@@ -1,9 +1,9 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Tests;
+namespace Codedefective\CGHooks\Tests;
 
-use BrainMaestro\GitHooks\Commands\AddCommand;
-use BrainMaestro\GitHooks\Hook;
+use Codedefective\CGHooks\Commands\AddCommand;
+use Codedefective\CGHooks\Hook;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Console\Output\OutputInterface;
 

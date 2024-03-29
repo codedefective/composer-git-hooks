@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Commands;
+namespace Codedefective\CGHooks\Commands;
 
-use BrainMaestro\GitHooks\Hook;
+use Codedefective\CGHooks\Hook;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -85,7 +85,6 @@ class AddCommand extends Command
         $exists = file_exists($filename);
 
         // On windows, the shebang needs to point to bash
-        // See: https://github.com/BrainMaestro/composer-git-hooks/issues/7
         $shebang = ($this->windows ? '#!/bin/bash' : '#!/bin/sh') . PHP_EOL . PHP_EOL;
         $composerDir = $this->global ? $this->dir : getcwd();
         $contents = Hook::getHookContents($composerDir, $contents, $hook);

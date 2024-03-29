@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Tests;
+namespace Codedefective\CGHooks\Tests;
 
-use BrainMaestro\GitHooks\Commands\ListCommand;
+use Codedefective\CGHooks\Commands\ListCommand;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Tester\CommandTester;
 

@@ -1,6 +1,6 @@
 {
-    "name": "brainmaestro/composer-git-hooks",
-    "description": "Easily manage git hooks in your composer config",
+    "name": "codedefective/composer-git-hooks",
+    "description": "Composer Git Hook",
     "type": "library",
     "minimum-stability": "stable",
     "license": "MIT",
@@ -11,8 +11,8 @@
     ],
     "authors": [
         {
-            "name": "Ezinwa Okpoechi",
-            "email": "brainmaestro@outlook.com"
+            "name": "Erdem A.",
+            "email": "accounts@erdemakbulut.com.tr"
         }
     ],
     "require": {
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrainMaestro\\GitHooks\\": "src/"
+            "Codedefective\\CGHooks\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -34,7 +34,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrainMaestro\\GitHooks\\Tests\\": "tests/"
+            "Codedefective\\CGHooks\\Tests\\": "tests/"
         }
     },
     "bin": [

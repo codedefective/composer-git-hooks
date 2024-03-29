@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainMaestro\GitHooks\Tests;
+namespace Codedefective\CGHooks\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 

@@ -14,12 +14,12 @@ if (is_file($autoload = __DIR__ . '/vendor/autoload.php')) {
     exit(1);
 }
 
-use BrainMaestro\GitHooks\Hook;
-use BrainMaestro\GitHooks\Commands\AddCommand;
-use BrainMaestro\GitHooks\Commands\UpdateCommand;
-use BrainMaestro\GitHooks\Commands\RemoveCommand;
-use BrainMaestro\GitHooks\Commands\ListCommand;
-use BrainMaestro\GitHooks\Commands\HookCommand;
+use Codedefective\CGHooks\Hook;
+use Codedefective\CGHooks\Commands\AddCommand;
+use Codedefective\CGHooks\Commands\UpdateCommand;
+use Codedefective\CGHooks\Commands\RemoveCommand;
+use Codedefective\CGHooks\Commands\ListCommand;
+use Codedefective\CGHooks\Commands\HookCommand;
 use Symfony\Component\Console\Application;
 
 $application = new Application('Composer Git Hooks', '3.0.0-alpha.1');
