@@ -9,21 +9,21 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 abstract class Command extends SymfonyCommand
 {
-    private $output;
+    private OutputInterface $output;
 
     protected $dir;
-    protected $composerDir;
-    protected $hooks;
-    protected $gitDir;
-    protected $lockDir;
-    protected $global;
-    protected $lockFile;
+    protected mixed $composerDir;
+    protected array $hooks;
+    protected mixed $gitDir;
+    protected mixed $lockDir;
+    protected mixed $global;
+    protected mixed $lockFile;
 
     abstract protected function init(InputInterface $input);
 
     abstract protected function command();
 
-    final protected function execute(InputInterface $input, OutputInterface $output)
+    final protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->output = $output;
         $this->gitDir = $input->getOption('git-dir') ?: git_dir();

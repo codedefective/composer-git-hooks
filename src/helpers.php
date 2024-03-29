@@ -10,10 +10,10 @@ if (! function_exists('create_hooks_dir')) {
      *
      * @return void
      */
-    function create_hooks_dir($dir, $mode = 0700, $recursive = true)
+    function create_hooks_dir(string $dir, mixed $mode = 0700, bool $recursive = true): void
     {
-        if (! is_dir("{$dir}/hooks")) {
-            mkdir("{$dir}/hooks", $mode, $recursive);
+        if (! is_dir("$dir/hooks")) {
+            mkdir("$dir/hooks", $mode, $recursive);
         }
     }
 }
@@ -24,7 +24,7 @@ if (! function_exists('is_windows')) {
      *
      * @return bool
      */
-    function is_windows()
+    function is_windows(): bool
     {
         return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
     }
@@ -34,7 +34,7 @@ if (! function_exists('global_hook_dir')) {
     /**
      * Gets the global directory set for git hooks
      */
-    function global_hook_dir()
+    function global_hook_dir(): string
     {
         return trim((string) shell_exec('git config --global core.hooksPath'));
     }
@@ -46,7 +46,7 @@ if (! function_exists('git_dir')) {
      * if one is not provided by the user.
      * @return string|false
      */
-    function git_dir()
+    function git_dir(): bool|string
     {
         // Don't show command error if git is not initialized
         $errorToDevNull = is_windows() ? '' : ' 2>/dev/null';
@@ -54,7 +54,7 @@ if (! function_exists('git_dir')) {
         $gitDir = trim((string) shell_exec('git rev-parse --git-common-dir'.$errorToDevNull));
         if ($gitDir === '' || $gitDir === '--git-common-dir') {
             // the version of git does not support `--git-common-dir`
-            // we fallback to `--git-dir` which and lose worktree support
+            // we fall back to `--git-dir` which and lose worktree support
             $gitDir = trim((string) shell_exec('git rev-parse --git-dir'.$errorToDevNull));
         }
 
